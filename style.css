@@ -95,6 +95,7 @@ ul li {
     padding: 8px 16px;
     outline: none;
     border: none;
+    border-radius: 16px;
     width: 160px;
     font-size: 16px;
     text-transform: capitalize;
@@ -186,7 +187,20 @@ ul li {
 
     .app__form,
     .app__list {
-        width: 95%;
+        width: 100%;
+        padding: 12px;
+    }
+
+    .app__form{
+        flex-wrap: wrap;
+        margin-bottom: unset;
+    }
+
+    .app__form--input, .app__form--btn{
+        min-width: 100%;
+        margin-bottom: 12px;
+        padding: 16px;
+        margin-left: unset;
     }
 
     .app__name {
@@ -198,8 +212,12 @@ ul li {
         font-size: 14px;
     }
 
-    .app__list::-webkit-scrollbar,
+    .app__item--input{
+        font-size: 16px;
+        margin-left: 22px;
+    }
 
+    .app__list::-webkit-scrollbar,
     .app__list::-webkit-scrollbar-thumb {
         display: none;
     }
