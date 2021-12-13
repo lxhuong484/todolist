@@ -209,8 +209,8 @@
 
         sortArrayByAZ = function (array) {
             const arraySorted = array.sort(function (first, last) {
-                let firstItem = first.name.toLowerCase()
-                let lastItem = last.name.toLowerCase()
+                const firstItem = first.name.toLowerCase()
+                const lastItem = last.name.toLowerCase()
 
                 if (firstItem > lastItem) {
                     return 1;
@@ -234,14 +234,14 @@
         }
 
         editItem = function (index) {
-            let parentElement = document.getElementById(`app__item-${index}`)
-            let inputElement = parentElement.querySelector('.app__item--input')
+            const parentElement = document.getElementById(`app__item-${index}`)
+            const inputElement = parentElement.querySelector('.app__item--input')
 
-            let btnEdit = parentElement.querySelector('.btn--edit')
+            const btnEdit = parentElement.querySelector('.btn--edit')
             btnEdit.setAttribute("onclick", `saveItem(${index})`)
 
             // change icon
-            let iconEdit = parentElement.querySelector('.fal.fa-pencil-alt')
+            const iconEdit = parentElement.querySelector('.fal.fa-pencil-alt')
             iconEdit.classList.remove('fa-pencil-alt')
             iconEdit.classList.add('fa-save')
 
@@ -262,14 +262,14 @@
 
 
         saveItem = function (index) {
-            let parentElement = document.getElementById(`app__item-${index}`)
-            let inputElement = parentElement.querySelector('.app__item--input')
+            const parentElement = document.getElementById(`app__item-${index}`)
+            const inputElement = parentElement.querySelector('.app__item--input')
 
-            let btnEdit = parentElement.querySelector('.btn--edit')
+            const btnEdit = parentElement.querySelector('.btn--edit')
             btnEdit.setAttribute("onclick", `editItem(${index})`)
 
             // change icon
-            let iconEdit = parentElement.querySelector('.fal.fa-save')
+            const iconEdit = parentElement.querySelector('.fal.fa-save')
             iconEdit.classList.remove('fa-save')
             iconEdit.classList.add('fa-pencil-alt')
 
